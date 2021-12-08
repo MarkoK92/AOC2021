@@ -8,7 +8,7 @@ with open('inputs/day8.txt') as f:
     data = [x.split("|") for x in f]
 
 pattern = "abcefg cf acdeg acdfg bdcf abdfg abdefg acf abcdefg abcdfg"
-numbers = Counter(list(pattern.replace(" ", ""))) #map chars to numbers
+numbers = Counter(list(pattern.replace(" ", ""))) #replace chars with numbers
 
 for num, char in enumerate(pattern.split(" ")):
     mapper[tuple(sorted([numbers[c] for c in char]))] = num #map pattern chars with numbers and count how many match
