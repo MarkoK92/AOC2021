@@ -15,7 +15,7 @@ def calculate_risk(rows, cols):
     rows, cols = len(data), len(data[0])
     for row in range(rows):
         for col in range(cols):
-            if data[row][col] < calculate_pts(row,col,rows,cols):
+            if data[row][col] < calculate_pts(row,col,rows,cols): #recursive to later sum
                 points.append(int(data[row][col]) + 1)
 
 calculate_risk(len(data) ,data[0])
